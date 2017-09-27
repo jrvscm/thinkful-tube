@@ -1,11 +1,16 @@
 
 function getDataFromApi (searchTerm){
 	$.ajax({
-		url: `https://www.googleapis.com/youtube/v3/search?&q=${searchTerm}
-		&part=snippet&maxResults=20&key=AIzaSyDBPGZUKC3yT8dLk8bVaaDmIBApZjyRE-E`,
+		url: `https://www.googleapis.com/youtube/v3/search?`,
 		dataType: 'json',
-		success: function(data) {
-			console.log(data)
+		data: {
+			q: `${searchTerm}`,
+			part: `snippet`,
+			maxResults: `20`,
+			key: `AIzaSyDBPGZUKC3yT8dLk8bVaaDmIBApZjyRE-E`
+		},
+		success: function(response) {
+			console.log(response)
 			//renderResult(data);
 		}	
 	});
