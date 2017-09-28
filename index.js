@@ -18,11 +18,11 @@ function getDataFromApi (searchTerm){
 
 function renderResult(data) {
 for(i=0; i<data.items.length; i++) {
-            $('.js-search-results').append(
-            `<h3>Title: ${data.items[i].snippet.title}</h3>
-            <a href="https://www.youtube.com/watch?v=${data.items[i].id.videoId}" target=_"blank"><img src="${data.items[i].snippet.thumbnails.medium.url}"></a>
-            <p>${data.items[i].snippet.description}</p>
-            <a href="https://youtube.com/${data.items[i].snippet.channelTitle}" target="_blank">More from ${data.items[i].snippet.channelTitle}</a></h4>`);
+    $('.js-search-results').append(
+       `<h3>Title: ${data.items[i].snippet.title}</h3>
+       <a href="https://www.youtube.com/watch?v=${data.items[i].id.videoId}" target=_"blank"><img src="${data.items[i].snippet.thumbnails.medium.url}"></a>
+       <p>${data.items[i].snippet.description}</p>
+       <a href="https://youtube.com/${data.items[i].snippet.channelTitle}" target="_blank">More from ${data.items[i].snippet.channelTitle}</a></h4>`);
 }
 }
 
