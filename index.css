@@ -4,7 +4,7 @@
 }
 
 body{
-	background-color:#30887b;
+	background-color:SlateBlue;
 	color: white;
 }
 
@@ -66,6 +66,7 @@ h1{
 
 .results-h2 {
 	font-size: 36px;
+	padding-left: 50px;
 }
 .result-container h3 {
 	font-size: 30px;
