@@ -23,7 +23,7 @@ for(i=0; i<data.items.length; i++) {
        		<a href="https://www.youtube.com/watch?v=${data.items[i].id.videoId}" 
        		target=_"blank"><h3>${data.items[i].snippet.title}</h3></a>
        		<a href="https://www.youtube.com/watch?v=${data.items[i].id.videoId}" 
-       		target=_"blank"><img src="${data.items[i].snippet.thumbnails.medium.url}"></a>
+       		target=_"blank"><img src="${data.items[i].snippet.thumbnails.medium.url}" alt="${data.items[i].snippet.title}"></a>
        			<p>${data.items[i].snippet.description}</p>
        		<a href="https://youtube.com/${data.items[i].snippet.channelTitle}" 
        		target="_blank"><h4>More videos from ${data.items[i].snippet.channelTitle}</h4></a>
