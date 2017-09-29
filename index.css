@@ -4,7 +4,7 @@
 }
 
 body{
-	background-color:SlateBlue;
+	background-color:DodgerBlue;
 	color: white;
 }
 
@@ -23,7 +23,14 @@ h1{
 	font-size: 38px;
 }
 
-.search-box {
+label {
+	font-size: 20px;
+	display:table;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#search-box {
 	padding: 5px;
 	width: 200px;
 	display:table;
@@ -37,11 +44,11 @@ h1{
 	transition: all .3s ease;
 }
 
-.search-box:hover {
+#search-box:hover {
 	width: 220px;
 }
 
-.search-box:focus {
+#search-box:focus {
 	width: 220px;
 }
 
