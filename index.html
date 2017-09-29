@@ -7,18 +7,20 @@
     <title>Thinkful Tube</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
 <body>
-  <main>
+  <main role="main">
     <h1>Thinkful Tube</h1>
       <form action="#" class="js-search-form">
               <label for="query"></label>
-              <input type="text" class="js-query">
-              <button class="js-search-button" type="submit">Search</button>
+              <input type="text" class="js-query search-box">
+              <button class="js-search-button search-button" type="submit">Search</button>
       </form>
-          
-            <h2>Results</h2>
-            <div class="js-search-results">
+
+      <section class='search-results'>
+            <h2 class="js-results-h2 results-h2" aria-live="assertive" hidden></h2>
+            <div class="js-search-results" aria-live="assertive" hidden>
             
             </div>
+      </section>      
      </main>
      <script
           src="https://code.jquery.com/jquery-3.2.1.min.js"

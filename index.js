@@ -18,12 +18,18 @@ function getDataFromApi (searchTerm){
 
 function renderResult(data) {
 for(i=0; i<data.items.length; i++) {
-            $('.js-search-results').append(
-            `<h3>Title: ${data.items[i].snippet.title}</h3>
-            <a href="https://www.youtube.com/watch?v=${data.items[i].id.videoId}" target=_"blank"><img src="${data.items[i].snippet.thumbnails.medium.url}"></a>
-            <p>${data.items[i].snippet.description}</p>
-            <a href="https://youtube.com/${data.items[i].snippet.channelTitle}" target="_blank">More from ${data.items[i].snippet.channelTitle}</a></h4>`);
+    $('.js-search-results').append(
+       `<div class="result-container">
+       		<a href="https://www.youtube.com/watch?v=${data.items[i].id.videoId}" 
+       		target=_"blank"><h3>${data.items[i].snippet.title}</h3></a>
+       		<a href="https://www.youtube.com/watch?v=${data.items[i].id.videoId}" 
+       		target=_"blank"><img src="${data.items[i].snippet.thumbnails.medium.url}"></a>
+       			<p>${data.items[i].snippet.description}</p>
+       		<a href="https://youtube.com/${data.items[i].snippet.channelTitle}" 
+       		target="_blank"><h4>More videos from ${data.items[i].snippet.channelTitle}</h4></a>
+       </div>`).prop('hidden', false);
 }
+	$('.js-results-h2').empty().append(`Results: ${data.items.length}`).prop('hidden', false);
 }
 
 function watchSubmit() {
